@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
+import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 
 const Todo = () => {
+  useEffect(() => {
+    document.title = "Atrangi To Do List";
+    document.icon = <ReceiptLongIcon />;
+  }, []);
   const [num, setnum] = useState(0);
   const [item, setItem] = useState("");
   const fun = () => {
